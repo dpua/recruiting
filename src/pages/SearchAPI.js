@@ -25,14 +25,6 @@ class SearchAPI extends Component {
     q: findGetParameter('q', ''),
     next: 0,
   }
-  search = {
-    q_t: findGetParameter('q_t', ''),//text
-    q_p: findGetParameter('q_p', ''),//professions
-    q_l: findGetParameter('q_l', ''),//levels
-    q_c: findGetParameter('q_c', ''),//country
-    q_cc: findGetParameter('q_cc', ''),//city
-    q_ex: findGetParameter('q_ex', ''),//city
-  }
   componentDidMount = () => {
     this.getData();
     let search = this.getSearchString();
@@ -102,7 +94,7 @@ class SearchAPI extends Component {
         if (error?.code === 429) console.log("Quota exceeded for quota metric 'Queries' and limit 'Queries per day' ")
       });
   }
-  getSearchString = (data = this.search) => {
+  getSearchString = (data = this.state) => {
     let search = '';
     ['q_t', 'q_p', 'q_l', 'q_cc'].forEach(e => {
       if (data?.[e]) search += `${data[e]} `;
@@ -116,7 +108,7 @@ class SearchAPI extends Component {
   }
   setCategory = (k, e) => {
     console.log("~~~setCategory: q_" + k, e)
-    this.search[k] = e;
+    this.setState({ [k]: e });
     setGetParameter(k, e);
   }
   setPaginatedItem = e => {
