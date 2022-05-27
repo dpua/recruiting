@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^email_activation/([a-zA-Z0-9_-]+)/?$ handler/activation.php?code=$1
+Header set Access-Control-Allow-Origin: *
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

@@ -1,0 +1,139 @@
+.search_container {
+  display: table;
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 900px;
+  background-color: #f1f3f4;
+}
+
+.search_all_text {
+  display: table;
+  margin: 20px;
+  padding: 7px;
+  width: calc(100% - 40px);
+  max-width: 900px;
+  background-color: #f1f3f4;
+  border: 1px solid #d3d3d3;
+  color: #929292;
+}
+
+.search_item {
+  font-size: 13px;
+  font-family: arial, roboto, sans-serif;
+  display: table;
+  margin: 7px 0;
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.search_item a {
+  font-size: 14px;
+  color: revert;
+}
+
+.search_item a p {
+  font-size: 13px;
+  color: #8cc054;
+}
+
+.search_image {
+  background-size: cover;
+  background-position: center;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: solid 1px white; */
+  box-shadow: inset 0px 0px 0px 5px #ffffffb3;
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.search_image.visit {
+  box-shadow: inset 0px 0px 0px 5px #8dc053b3;
+}
+
+.visit_popup {
+  margin: 0px 14px;
+  position: relative;
+}
+
+.visit_popup svg {
+  margin: -5px;
+}
+
+.visit_popup div {
+  display: none;
+  position: absolute;
+  background-color: #8dc053;
+  color: white;
+  box-shadow: 1px 1px 5px -2px #000000;
+  padding: 7px;
+  top: 22px;
+  right: 0px;
+  width: max-content;
+  /* max-width: calc( 100vw - 14px ); */
+  border-radius: 4px;
+}
+
+.visit_popup:hover div {
+  display: block;
+}
+
+.search_rsult_info{
+  margin: 20px;
+  margin-top: 0;
+  padding: 0;
+  font-weight: 500;
+  text-transform: none;
+  color: #575757;
+  height: 36px;
+  border: none;
+  float: left;
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-size: 13px;
+  font-family: arial, roboto, sans-serif;
+}
+
+.submit_button {
+  margin: 20px;
+  margin-top: 0;
+  padding: 0 24px 0 24px;
+  font-weight: 500;
+  text-transform: none;
+  transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background-color: #34383d;
+  float: right;
+  display: block;
+  position: relative;
+  text-transform: uppercase
+}
+
+.submit_button:not(:disabled):hover {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+  background-color: #2158a8;
+}
+
+.submit_button:not(:disabled) {
+  background-color: #1a73e8;
+}
+
+@media (min-width: 900px) {
+  .search_container {
+    background-color: #f1f3f400;
+  }
+
+  .search_item {
+    margin: 7px 14px;
+    box-shadow: 0 0 1px #cccccc;
+    width: calc(100% - 28px);
+  }
+}
