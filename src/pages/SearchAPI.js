@@ -109,6 +109,7 @@ class SearchAPI extends Component {
   setCategory = (k, e) => {
     console.log("~~~setCategory: q_" + k, e)
     this.setState({ [k]: e });
+    this.getSearchString();
     setGetParameter(k, e);
   }
   setPaginatedItem = e => {
